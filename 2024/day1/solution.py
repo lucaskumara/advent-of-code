@@ -26,7 +26,6 @@ print(total)
 
 ### Part 2
 
-left_numbers = set(left_list)   # Eliminate duplicates
 right_counts = {}
 
 score = 0
@@ -39,7 +38,7 @@ for number in right_list:
         right_counts[number] = 1
 
 # Calculate score by iterating through the set and multiplying by the count
-for number in left_numbers:
+for number in left_list:
     if number in right_counts:
         score += number * right_counts[number]
 
